@@ -1,6 +1,6 @@
 package srp;
 
-public class Main {
+public class MainSRP {
     public static void main(String[] args) {
         Pedido pedido = new Pedido();
 

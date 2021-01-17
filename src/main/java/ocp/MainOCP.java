@@ -5,7 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class MainOCP {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Leitor leitorCSV = new Leitor();
         leitorCSV.setDiretorio("C:\\Users\\Juliano_Bonotto\\Desktop\\SOLID\\");
