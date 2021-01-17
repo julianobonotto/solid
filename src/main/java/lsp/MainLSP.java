@@ -1,5 +1,6 @@
 package lsp;
 
+import lsp.poligonos.PoligonFantasy;
 import lsp.poligonos.Quadrado;
 import lsp.poligonos.Retangulo;
 
@@ -21,5 +22,10 @@ public class MainLSP {
         poligonoQad.getForma();
         ((Quadrado) poligonoQad.getForma()).setAltura(5);
         System.out.println("Area quadrado = " + poligonoQad.getArea());
+
+        Poligono poligonFantasy = new PoligonFantasy();
+        poligonFantasy.setForma(new PoligonFantasy());
+        poligonFantasy.getForma();
+        System.out.println("Area poligonoFantasy = " + poligonFantasy.getArea());
     }
 }
