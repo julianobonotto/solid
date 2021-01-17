@@ -1,6 +1,8 @@
-package lsp;
+package lsp.poligonos;
 
-public class Retangulo {
+import lsp.Poligono;
+
+public class Quadrado extends Poligono {
     private Integer largura;
     private Integer altura;
 
@@ -10,6 +12,7 @@ public class Retangulo {
 
     public void setLargura(Integer largura) {
         this.largura = largura;
+        this.altura = largura;
     }
 
     public Integer getAltura() {
@@ -18,9 +21,6 @@ public class Retangulo {
 
     public void setAltura(Integer altura) {
         this.altura = altura;
-    }
-
-    public Integer getArea() {
-        return this.largura * this.altura;
+        this.largura = altura;
     }
 }
