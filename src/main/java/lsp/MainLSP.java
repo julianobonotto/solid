@@ -17,13 +17,13 @@ public class MainLSP {
         System.out.println("Area retangulo = " + poligonoRet.getArea());
 
 
-        Poligono poligonoQad = new Quadrado();
+        Poligono poligonoQad = new Poligono();
         poligonoQad.setForma(new Quadrado());
         poligonoQad.getForma();
         ((Quadrado) poligonoQad.getForma()).setAltura(5);
         System.out.println("Area quadrado = " + poligonoQad.getArea());
 
-        Poligono poligonFantasy = new PoligonFantasy();
+        Poligono poligonFantasy = new Poligono();
         poligonFantasy.setForma(new PoligonFantasy());
         poligonFantasy.getForma();
         System.out.println("Area poligonoFantasy = " + poligonFantasy.getArea());
