@@ -1,4 +1,4 @@
 package isp.componentes;
 
-public class NOtificacao {
+public class Notificacao {
 }

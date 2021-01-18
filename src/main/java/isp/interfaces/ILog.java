@@ -3,7 +3,7 @@ package isp.interfaces;
 import isp.componentes.Log;
 import isp.componentes.Notificacao;
 
-public interface ICadastro {
+public interface ILog {
 
-    public void salvar();
+    public void registrarLog(Log log);
 }
