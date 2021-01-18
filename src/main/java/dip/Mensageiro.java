@@ -8,6 +8,10 @@ import java.lang.reflect.Method;
 public class Mensageiro {
     private String canal;
 
+    public Mensageiro(IMensagemToken canal) {
+        this.canal = canal.getClass().getName();
+    }
+
     public String getCanal() {
         return canal;
     }
@@ -17,7 +21,7 @@ public class Mensageiro {
     }
 
     public void enviarToken() throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        Class<?> clazz = Class.forName("dip."+canal);
+        Class<?> clazz = Class.forName(canal);
         Object canal = clazz.getDeclaredConstructor().newInstance();
         Method enviar = clazz.getDeclaredMethod("enviar");
         enviar.invoke(canal);

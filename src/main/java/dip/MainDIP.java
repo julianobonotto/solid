@@ -4,17 +4,14 @@ import java.lang.reflect.InvocationTargetException;
 
 public class MainDIP {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        Mensageiro mensageiro = new Mensageiro();
-        mensageiro.setCanal("Email");
+        Mensageiro mensageiro = new Mensageiro(new Email());
         mensageiro.enviarToken();
 
-        Mensageiro mensageiro2 = new Mensageiro();
-        mensageiro2.setCanal("Sms");
+        Mensageiro mensageiro2 = new Mensageiro(new Sms());
         mensageiro2.enviarToken();
 
 
-        Mensageiro mensageiro3 = new Mensageiro();
-        mensageiro3.setCanal("Whatsapp");
+        Mensageiro mensageiro3 = new Mensageiro(new Whatsapp());
         mensageiro3.enviarToken();
     }
 }
