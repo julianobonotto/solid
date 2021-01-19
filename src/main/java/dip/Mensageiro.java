@@ -1,32 +1,21 @@
 package dip;
 
-import ocp.extrator.Arquivo;
-
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
 public class Mensageiro {
-    private String canal;
+    private IMensagemToken canal;
 
     public Mensageiro(IMensagemToken canal) {
-        this.canal = canal.getClass().getName();
-    }
-
-    public String getCanal() {
-        return canal;
-    }
-
-    public void setCanal(String canal) {
         this.canal = canal;
     }
 
-    public void enviarToken() throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        Class<?> clazz = Class.forName(canal);
-        Object canal = clazz.getDeclaredConstructor().newInstance();
-        Method enviar = clazz.getDeclaredMethod("enviar");
-        enviar.invoke(canal);
+    public IMensagemToken getCanal() {
+        return canal;
+    }
 
-//        Email email = new Email();
-//        email.enviar();
+    public void setCanal(IMensagemToken canal) {
+        this.canal = canal;
+    }
+
+    public void enviarToken() {
+        this.canal.enviar();
     }
 }

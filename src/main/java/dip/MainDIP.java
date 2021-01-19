@@ -3,7 +3,7 @@ package dip;
 import java.lang.reflect.InvocationTargetException;
 
 public class MainDIP {
-    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    public static void main(String[] args) {
         Mensageiro mensageiro = new Mensageiro(new Email());
         mensageiro.enviarToken();
 
